@@ -1,7 +1,12 @@
 import React from "react";
+import MainLayout from "../../layout/MainLayout/MainLayout";
 import styles from "./LandingPage.module.css";
 function LandingPage() {
-  return <div>LandingPage</div>;
+  return (
+    <MainLayout>
+      <div>LandingPage</div>
+    </MainLayout>
+  );
 }
 
 export default LandingPage;

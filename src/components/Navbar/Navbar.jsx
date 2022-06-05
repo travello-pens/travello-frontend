@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <>
       {isLogin === true ? (
-        <div className={afterLoginWrapper}>
+        <div className={styles.afterLoginWrapper}>
           <h1>after login</h1>
         </div>
       ) : (
