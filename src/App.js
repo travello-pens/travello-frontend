@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
+import { APP_ROUTE } from "./routes/routes";
+import { Skeleton } from "antd";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Skeleton />}>
+      <Router>
+        <Switch>
+          {APP_ROUTE.map((value) => {
+            if (value.private) {
+              return <PrivateRoute key={value.name} component={value.component} path={value.path} exact={value.exact} />;
+            } else {
+              return <PublicRoute key={value.name} restricted={value.restricted} path={value.path} component={value.component} exact={value.exact} />;
+            }
+          })}
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 
