@@ -50,6 +50,7 @@
 .listText {
   font-size: 14px;
   color: rgba(92, 113, 132, 1);
+  text-decoration: none;
 }
 
 .copyText {
