@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import { APP_ROUTE } from "./routes/routes";
-import { Skeleton } from "antd";
 function App() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    <Suspense fallback={<p>Loading...</p>}>
       <Router>
         <Switch>
           {APP_ROUTE.map((value) => {
