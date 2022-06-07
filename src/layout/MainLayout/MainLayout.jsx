@@ -6,7 +6,7 @@ function MainLayout(props) {
   return (
     <div>
       <Navbar />
-      {props.children}
+      <div className={styles.content}>{props.children}</div>
       <Footer />
     </div>
   );
