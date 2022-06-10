@@ -1,0 +1,16 @@
+.jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.adsttc.com/media/images/5e66/5e5e/b357/65bd/db00/0025/large_jpg/10.jpg?1583767123");
+  background-size: cover;
+}
+
+.socialMediaIcon {
+  background-color: rgba(255, 255, 255, 0.5);
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100vh;
+}
+
+.socialMediaIcon img {
+  vertical-align: middle;
+}
