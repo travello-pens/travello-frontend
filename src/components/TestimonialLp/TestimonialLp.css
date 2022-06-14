@@ -1,0 +1,30 @@
+.tl-container {
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tl-title {
+  text-align: center;
+  font-size: 28px;
+  margin: 50px 0px;
+}
+
+.tl-title__span {
+  color: #eb1c24;
+}
+
+.tl-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media screen and (max-width: 425px){
+  .testimonial-cards{
+    width: 95%;
+  }
+}

@@ -1,0 +1,136 @@
+.al-container {
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 50px;
+}
+
+.al-title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+.al-title__span {
+  color: #eb1c24;
+}
+
+/* first section */
+.al-first-section {
+  display: flex;
+  align-items: center;
+}
+
+.al-first__image {
+  flex: 1;
+  max-width: 100%;
+}
+
+.al-first__description {
+  flex: 1;
+  margin: 0px 100px;
+}
+
+.fd-tag {
+  color: #eb1c24;
+  font-size: 16px;
+}
+
+.fd-h2 {
+  color: #eb1c24;
+  margin: 0;
+}
+
+/* second section */
+.al-second-section {
+  display: flex;
+  align-items: center;
+}
+
+.al-second__description {
+  flex: 1;
+  margin: 0px 100px;
+}
+
+.al-second__image {
+  flex: 1;
+  max-width: 100%;
+}
+
+/* third section */
+.al-third-section {
+  margin: 0px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Responsives */
+
+@media screen and (max-width: 1024px){
+  .al-first__image {
+    width: 50%;
+  }
+
+  .al-second__image {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1299px){
+  .al-third-section {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px){
+  .al-third-section {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .al-third-section {
+    margin: 0px 50px;
+  }
+
+  .fd-h2 {
+    margin: 30px 0px 0px 0px;
+  }
+  
+  .al-first__image {
+    width: 20%;
+    margin: 40px 0px;
+  }
+
+  .al-second__image {
+    width: 20%;
+    margin: 40px 0px;
+  }
+
+  .fd-text, .sd-text{
+    width: 140%;
+  }
+
+  .al-first__description, .al-second__description{
+    transform: translateX(-20%);
+  }
+}
+
+@media screen and (max-width: 576px){
+  .al-first__image, .al-second__image{
+    display: none;
+  }
+
+  .al-first__description, .al-second__description{
+    margin: 20px 120px;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  .al-third-section {
+    margin: 0px 25px;
+  }
+  
+  .al-first__description, .al-second__description{
+    margin: 20px 80px;
+  }
+}

@@ -1,0 +1,141 @@
+.lp-main-container {
+  overflow: hidden;
+}
+
+.lp-topLp {
+  background-image: url("../../assets//img/bg-hotel-lp.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.lp-jumbotron {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 80px auto;
+}
+
+.lp-jumbotron__headline {
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.lp-jumbotron__description {
+  font-size: 20px;
+  color: #fff;
+  font-weight: medium;
+  text-align: center;
+  margin: 20px 100px;
+}
+
+.lp-jumbotron__search {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.search-btn {
+  background-color: #eb1c24;
+  color: #fff;
+}
+
+.lp-jumbotron__searchu {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  margin: 0px auto;
+  margin-bottom: 150px;
+  border-radius: 60px;
+  padding: 10px 10px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.lp-jumbotron__searchu input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 10px;
+  font-size: 18px;
+  color: #cac7ff;
+}
+
+.lp-jumbotron__searchu p {
+  color: #cac7ff;
+}
+
+::placeholder {
+  margin-left: 16px;
+  color: #cac7ff;
+}
+
+.lp-jumbotron__searchu img {
+  width: 25px;
+}
+
+.lp-jumbotron__searchu button {
+  border: 0;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background: #eb1c24;
+  cursor: pointer;
+}
+
+.lp-services {
+  width: 100%;
+}
+
+/* Responsives */
+
+@media screen and (max-width: 1440px) {
+  .lp-jumbotron__searchu {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lp-jumbotron {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lp-jumbotron__searchu {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lp-jumbotron__searchu {
+    width: 80%;
+  }
+
+  .lp-jumbotron__headline {
+    font-size: 50px;
+  }
+
+  .lp-jumbotron__description {
+    margin: 20px 20px;
+  }
+
+  .lp-jumbotron__searchu {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .lp-jumbotron__searchu input {
+    font-size: 16px;
+  }
+}
+
+/* @media only screen and (max-width: 768px) and (min-width: 426px)  {
+    .lp-topLp{
+      height: 110vh;
+    }
+  } */

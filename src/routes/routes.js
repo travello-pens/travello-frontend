@@ -1,8 +1,10 @@
 import { lazy } from "react";
+import Checkout from "../pages/Checkout/Checkout";
 
 const LandingPage = lazy(() => import("../pages/LandingPage/LandingPage"));
 const LandingDestination = lazy(() => import("../pages/LandingDestination/LandingDestination"));
 const LandingTravelAgent = lazy(() => import("../pages/LandingTravelAgent/LandingTravelAgent"));
+const DetailProduct = lazy(() => import("../pages/DetailProduct/DetailProduct"));
 
 export const APP_ROUTE = [
   {
@@ -24,6 +26,20 @@ export const APP_ROUTE = [
     path: "/travel-agent/:travelAgent",
     exact: false,
     component: LandingTravelAgent,
+    restricted: true,
+  },
+  {
+    name: "DetailProduct",
+    path: "/detail-product/1",
+    exact: false,
+    component: DetailProduct,
+    restricted: true,
+  },
+  {
+    name: "Checkout",
+    path: "/Checkout/1",
+    exact: false,
+    component: Checkout,
     restricted: true,
   },
 ];

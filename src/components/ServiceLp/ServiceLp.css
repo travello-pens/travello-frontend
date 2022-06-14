@@ -1,0 +1,136 @@
+.sl-container {
+  width: 100%;
+}
+
+.sl-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.sl-title__span {
+  color: #eb1c24;
+}
+
+.sl-card-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sl-card-container {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sl-card-container-padding {
+  margin-top: 50px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card img {
+  width: 300px;
+  height: 200px;
+  border-radius: 16px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #1e272e;
+  transform: rotateY(180deg);
+}
+.flip-card-back h3 {
+  margin-top: 20px;
+  color: white;
+}
+.flip-card-back p {
+  color: white;
+}
+
+/* Respnsives */
+
+@media screen and (max-width: 1023px) {
+  .sl-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .flip-card-special {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .sl-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .flip-card-special {
+    display: block;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: white;
+  }
+
+  .flip-card {
+    width: 400px;
+    height: 300px;
+  }
+
+  .flip-card img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .flip-card {
+    width: 300px;
+    height: 200px;
+  }
+
+  .flip-card img {
+    width: 300px;
+    height: 200px;
+  }
+}
