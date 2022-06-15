@@ -11,7 +11,7 @@
 }
 
 .al-title__span {
-  color: #eb1c24;
+  color: #2196f3;
 }
 
 /* first section */
@@ -31,13 +31,17 @@
 }
 
 .fd-tag {
-  color: #eb1c24;
+  color: #2196f3;
   font-size: 16px;
 }
 
 .fd-h2 {
-  color: #eb1c24;
+  color: #2196f3;
   margin: 0;
+  font-size: 28px;
+  line-height: 36px !important;
+  color: rgba(30, 30, 30, 1);
+  font-weight: 700;
 }
 
 /* second section */
@@ -66,7 +70,7 @@
 
 /* Responsives */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .al-first__image {
     width: 50%;
   }
@@ -76,13 +80,13 @@
   }
 }
 
-@media screen and (max-width: 1299px){
+@media screen and (max-width: 1299px) {
   .al-third-section {
     grid-template-columns: repeat(2, minmax(250px, 1fr));
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .al-third-section {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -94,7 +98,7 @@
   .fd-h2 {
     margin: 30px 0px 0px 0px;
   }
-  
+
   .al-first__image {
     width: 20%;
     margin: 40px 0px;
@@ -105,32 +109,51 @@
     margin: 40px 0px;
   }
 
-  .fd-text, .sd-text{
+  .fd-text,
+  .sd-text {
     width: 140%;
   }
 
-  .al-first__description, .al-second__description{
+  .al-first__description,
+  .al-second__description {
     transform: translateX(-20%);
   }
 }
 
-@media screen and (max-width: 576px){
-  .al-first__image, .al-second__image{
+@media screen and (max-width: 576px) {
+  .al-first__image,
+  .al-second__image {
     display: none;
   }
 
-  .al-first__description, .al-second__description{
+  .al-first__description,
+  .al-second__description {
     margin: 20px 120px;
   }
 }
 
-
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
   .al-third-section {
     margin: 0px 25px;
   }
-  
-  .al-first__description, .al-second__description{
+
+  .al-first__description,
+  .al-second__description {
     margin: 20px 80px;
   }
+}
+
+.about-content-title {
+  font-size: 18px !important;
+  color: #2196f3;
+}
+
+.about-content-desc {
+  font-size: 14px;
+}
+
+.sd-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px !important;
 }

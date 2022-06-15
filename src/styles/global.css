@@ -90,6 +90,7 @@ video {
   vertical-align: baseline;
   font-family: "Poppins", sans-serif !important;
   color: #0d1b39;
+  line-height: 24px !important;
 }
 
 /* HTML5 display-role reset for older browsers */

@@ -20,7 +20,7 @@
 /* content */
 .contentWrapper {
   width: 100%;
-  margin: 20px 0px;
+  margin: 36px 0px;
 }
 
 .checkoutTitle {
@@ -135,11 +135,11 @@
 /* right */
 .contentRight {
   flex: 1;
-  background: #006c96;
+  background: #2196f3;
   border-radius: 8px;
   color: #fff;
   padding: 30px;
-  height: 380px;
+  height: 400px;
 }
 
 .summaryReservation {

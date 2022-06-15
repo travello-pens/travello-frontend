@@ -17,7 +17,7 @@ function AboutusLp() {
         <img src={FirstImage} alt="first image about us" className="al-first__image" />
         <div className="al-first__description">
           <p className="fd-tag">Kerjasama</p>
-          <h3 className="fd-title">Kerjasama dengan mitra travel agent</h3>
+          <h3 className="sd-title">Kerjasama dengan mitra travel agent</h3>
           <p className="fd-text">
             Semua mitra yang tergabung dalam Travello sudah terverifikasi untuk menjaga kredibilitas platform, sehingga tidak ada pihak yang akan dirugikan. Kami juga akan terus melakukan kontrol penuh kepada mitra untuk dapat terus
             berkembang menjadi platform yang lebih baik.
@@ -41,16 +41,18 @@ function AboutusLp() {
           </h2>
         </div>
         <div className="al-third__box">
-          <h3>Sistem yang terintegrasi</h3>
-          <p>Semua sistem yang ada di dalam Travello terhubung dengan database dimana keamanan data merupakan prioritas dalam platform yang kami sediakan, sehingga pengguna tidak perlu khawatir akan kebocoran data.</p>
+          <h3 className="about-content-title">Sistem yang terintegrasi</h3>
+          <p className="about-content-desc">
+            Semua sistem yang ada di dalam Travello terhubung dengan database dimana keamanan data merupakan prioritas dalam platform yang kami sediakan, sehingga pengguna tidak perlu khawatir akan kebocoran data.
+          </p>
         </div>
         <div className="al-third__box">
-          <h3>Transparansi harga</h3>
-          <p>Semua harga paket wisata yang ada akan ditampilkan kepada pengguna, tidak akan ada biaya tambahan diluar dari yang sudah dideskripsikan, sehingga pengguna tidak merasa tertipu.</p>
+          <h3 className="about-content-title">Transparansi harga</h3>
+          <p className="about-content-desc">Semua harga paket wisata yang ada akan ditampilkan kepada pengguna, tidak akan ada biaya tambahan diluar dari yang sudah dideskripsikan, sehingga pengguna tidak merasa tertipu.</p>
         </div>
         <div className="al-third__box">
-          <h3>Banyak pilihan</h3>
-          <p>Berbeda dengan E-Commerce lain yang hanya menyediakan layanan kamar, Travello menyediakan banyak pilihan layanan yang disediakan oleh travel agent tanpa ada batasan.</p>
+          <h3 className="about-content-title">Banyak pilihan</h3>
+          <p className="about-content-desc">Berbeda dengan E-Commerce lain yang hanya menyediakan layanan kamar, Travello menyediakan banyak pilihan layanan yang disediakan oleh travel agent tanpa ada batasan.</p>
         </div>
       </div>
     </div>

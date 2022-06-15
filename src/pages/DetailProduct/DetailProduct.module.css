@@ -21,7 +21,7 @@
 
 .mainWrapper {
   width: 100%;
-  margin: 20px 0px;
+  margin: 36px 0px;
 }
 
 .main {
@@ -196,9 +196,24 @@
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
-  background-color: #eb1c24;
+  background-color: #2196f3;
 }
 
 .btnCheckoutenabled:hover {
   color: #fff;
+}
+
+.seviceTitle {
+  font-weight: 700;
+}
+
+.selectPackage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricePackage {
+  font-size: 24px;
+  color: #2196f3;
 }

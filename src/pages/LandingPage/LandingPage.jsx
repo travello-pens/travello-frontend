@@ -4,14 +4,12 @@ import "./LandingPage.css";
 import styles from "./LandingPage.module.css";
 import LandingSearchBar from "../../components/LandingSearchBar/LandingSearchBar";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import Form from "react-bootstrap/Form";
 
 //component
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import AboutusLp from "../../components/AboutusLp/AboutusLp";
-import ServiceLp from "../../components/ServiceLp/ServiceLp";
-import TestimonialLp from "../../components/TestimonialLp/TestimonialLp";
-import ContactLp from "../../components/ContactLp/ContactLp";
-import search from "../../assets/img/search.png";
+import HotelSantika from "../../assets/images/Hotel+Santika.png";
 
 function LandingPage() {
   const searchHandler = (search) => {
@@ -19,10 +17,10 @@ function LandingPage() {
   };
   return (
     <MainLayout className="lp-main-container">
-      <div className={"row p-2 " + styles.jumbotron}>
+      <div className={styles.jumbotron}>
         <div className="col-12 col-md-9 mx-auto my-5">
           <h1 className="display-1 text-center">
-            <strong className="fw-bolder text-white">Rencanakan Perjalanan Wisata Anda Bersama Travello.id</strong>
+            <strong className={styles.jumbotronTitle}>Rencanakan Perjalanan Wisata Anda Bersama Travello.id</strong>
           </h1>
           <p className="lead text-center lh-lg mt-4 text-white">Temukan beragam destinasi wisata dari berbagai travel agent unggulan yang ada di Indonesia hanya dengan satu platform.</p>
           <LandingSearchBar placeholder="Cari paket wisata pilihan anda" onSubmit={searchHandler} />
@@ -42,10 +40,120 @@ function LandingPage() {
       <div className="lp-aboutus">
         <AboutusLp />
       </div>
-      <div className="lp-services">{/* <ServiceLp /> */}</div>
-      <div className="lp-testimonila">{/* <TestimonialLp /> */}</div>
-      <div className="lp-contact">{/* <ContactLp /> */}</div>
-      <div className="lp-contact"></div>
+      {/* city */}
+      <div className={styles.citySection}>
+        <div className={styles.titleSection}>
+          <span className={styles.titleColor}>Destinasi Terbaik</span> di Indonesia
+        </div>
+        <div className={styles.dividerColor}></div>
+        <div className={styles.contentSection}>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Bali</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Western_Surabaya_at_dusk_%28late_2015%29.jpg/600px-Western_Surabaya_at_dusk_%28late_2015%29.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Surabaya</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Tugu_Malang.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Malang</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://blog.antavaya.com/wp-content/uploads/2020/03/Destinasi-Wisata-Lombok-Paling-Populer-Tahun-2020-Sumber-Instagram-kezyayoanas_.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Lombok</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Bali</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Bali</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+          <div className={styles.cityItem}>
+            <div className={styles.cityImage}>
+              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
+            </div>
+            <p className={styles.cityTitle}>Bali</p>
+            <p className={styles.totalDestination}>50 destinasi</p>
+          </div>
+        </div>
+      </div>
+
+      {/* mitra */}
+      <div className={styles.mitraSection}>
+        <h5 className={styles.mitraTitleColor}>Siapa saja mitra kami ?</h5>
+        <p className={styles.mitraDesc}>Lebih dari 50 hotel bintang telah bermitra dengan InHotel</p>
+        <div className={styles.mitraContent}>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+        </div>
+        <div className={styles.mitraContent}>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+          <div className={styles.mitraImagesContainer}>
+            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
+          </div>
+        </div>
+      </div>
+
+      {/* contact */}
+      <div className={styles.contact}>
+        <div className={styles.contactLeft}>
+          <p className={styles.contactTag}>Buletin kami</p>
+          <h4 className={styles.contactTitle}>Tetap update dengan kami dengan berita mingguan</h4>
+          <p className={styles.contactDesc}>Berita terbaru aplikasi dan pengembangan produk langsung ke email Anda</p>
+        </div>
+        <div className={styles.contactRight}>
+          <p className={styles.formTitle}>Masukkan email anda!</p>
+          <div className={styles.formMitraGroup}>
+            <Form.Control type="email" placeholder="Masukkan email" />
+            <button className={styles.contactBtn}>Kirim</button>
+          </div>
+        </div>
+      </div>
     </MainLayout>
   );
 }

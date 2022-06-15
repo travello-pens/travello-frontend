@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import DatePicker from "react-datepicker";
@@ -10,6 +10,21 @@ import { AiTwotoneHome } from "react-icons/ai";
 import { BsCalendarDateFill } from "react-icons/bs";
 import MainLayout from "../../layout/MainLayout/MainLayout";
 function DetailProduct() {
+  const [reservationDate, setReservationDate] = useState(new Date());
+  const [sortingDate, setSortingDate] = useState("");
+
+  const dateChange = (date) => {
+    setReservationDate(date);
+    const getMonth = (month) => {
+      if (month + 1 < 10) {
+        month = "0" + (month + 1).toString();
+        return month;
+      } else {
+        return month + 1;
+      }
+    };
+    setSortingDate(date.toString().slice(11, 15) + "-" + getMonth(date.getMonth()).toString() + "-" + date.toString().slice(8, 10));
+  };
   return (
     <MainLayout>
       <div className={styles.mainWrapper}>
@@ -75,12 +90,14 @@ function DetailProduct() {
                         <FormControlLabel className={styles.packageItem} value={paket.id} control={<Radio />} label={`Rp. ${formatRupiah(paket.harga_harga)} / ${paket.nama_harga}`} />
                       </RadioGroup>
                     </FormControl> */}
+                <p className={styles.pricePackage}>Rp. 450.000</p>
+                <p className={styles.availablePackage}>16 sold</p>
               </div>
               <div className={styles.timePickerWrapper}>
                 <p className={styles.timePickerTitle}>TANGGAL PESANAN</p>
                 <div className={styles.timeBox}>
                   <BsCalendarDateFill className={styles.dateIcon} />
-                  <DatePicker className={styles.timePicker} />
+                  <DatePicker className={styles.timePicker} selected={reservationDate} onChange={dateChange} />
                 </div>
               </div>
               <div className={styles.pricesList}>
@@ -89,8 +106,8 @@ function DetailProduct() {
                   <p className={styles.pricevalue}>Rp. 4.500.000</p>
                 </div>
                 <div className={styles.addPrice}>
-                  <p className={styles.priceTitle}>Biaya Utama</p>
-                  <p className={styles.pricevalue}>Rp. 4.500.000</p>
+                  <p className={styles.priceTitle}>Pajak</p>
+                  <p className={styles.pricevalue}>Rp. 100.000</p>
                 </div>
                 <div className={styles.totalPrice}>
                   <p className={styles.priceTitle}>Total</p>
@@ -98,14 +115,20 @@ function DetailProduct() {
                 </div>
               </div>
               <div className={styles.btnCheckoutContainer}>
-                <Link
-                  to={{
-                    pathname: "/",
-                  }}
-                  className={styles.btnCheckoutenabled}
-                >
-                  Checkout
-                </Link>
+                {sortingDate === "" ? (
+                  <Link disabled className={styles.btnCheckoutdisabled}>
+                    Checkout
+                  </Link>
+                ) : (
+                  <Link
+                    to={{
+                      pathname: `/checkout/1`,
+                    }}
+                    className={styles.btnCheckoutenabled}
+                  >
+                    Checkout
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -1,4 +1,174 @@
 .jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg");
   background-size: cover;
+  padding: 36px;
+}
+
+.jumbotronTitle {
+  font-size: 56px;
+  color: #fff;
+  font-weight: bolder;
+  line-height: 64px !important;
+}
+
+.citySection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px 96px;
+}
+
+.contentSection {
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.titleSection {
+  text-align: center;
+  font-size: 24px;
+}
+
+.titleColor {
+  color: #2196f3;
+  font-weight: medium;
+}
+
+.cityItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cityImage {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+}
+
+.cityImageItem {
+  width: 150px;
+  height: 150px;
+}
+
+.cityTitle,
+.totalDestination {
+  text-align: center;
+  margin: 0px;
+}
+
+.cityTitle {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.totalDestination {
+  color: #bcbcbb;
+  font-size: 14px;
+}
+
+.dividerColor {
+  width: 10%;
+  margin: 0px auto;
+  border: 1px solid #2196f3;
+}
+
+.mitraSection {
+  padding: 36px 96px;
+}
+
+.mitraTitleColor {
+  color: #2196f3;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.mitraDesc {
+  color: #bcbcbb;
+  font-size: 14px;
+}
+
+.mitraContent {
+  display: flex;
+  gap: 16px;
+  justify-content: space-around;
+}
+
+.mitraImagesContainer {
+  width: 200px;
+  overflow: hidden;
+}
+
+.imageItemMitra {
+  width: 205px;
+  height: auto;
+}
+
+.contact {
+  width: 60%;
+  margin: 24px auto;
+  background: #cfe8fc;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  display: flex;
+  gap: 128px;
+  padding: 24px 36px;
+}
+
+.contactLeft {
+  flex: 3;
+}
+
+.contactTag {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2196f3;
+}
+
+.contactTitle {
+  font-size: 24px;
+  color: #1d242a;
+  font-weight: 500;
+  line-height: 36px !important;
+}
+
+.contactDesc {
+  font-size: 14px;
+  color: rgba(100, 96, 125, 1);
+}
+
+.contactRight {
+  flex: 2;
+}
+
+.formTitle {
+  color: #2196f3;
+  font-size: 16px;
+}
+
+.formMitraGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.formFieldMitra {
+  background-color: #fff;
+  border: 1px solid #e1e6ea;
+  border-radius: 8px;
+  outline: none;
+}
+
+.contactBtn {
+  width: 100%;
+  background: #2196f3;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  padding: 8px 0px;
 }

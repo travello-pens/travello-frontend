@@ -127,7 +127,7 @@ function Checkout(props) {
               <div className={styles.divider}></div>
               <h5 className={styles.totalTitle}>Total Pemesanan</h5>
               <p className={styles.totalValue}>Rp. 4.500.000</p>
-              <button className={styles.btnPayment}>Pembayaran</button>
+              <button className={styles.btnPayment}>Selesai</button>
             </div>
           </div>
         </div>
