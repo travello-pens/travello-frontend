@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 //styles
 import styles from "./Checkout.module.css";
 import { Form } from "react-bootstrap";
 //image/icon
 import { BsCalendarDateFill } from "react-icons/bs";
 import MainLayout from "../../layout/MainLayout/MainLayout";
+import Modal from "react-bootstrap/esm/Modal";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
 function Checkout(props) {
+  const [modalSuccesShow, setModalSuccesShow] = useState(false);
   return (
     <MainLayout>
       {/* content */}
@@ -127,11 +130,28 @@ function Checkout(props) {
               <div className={styles.divider}></div>
               <h5 className={styles.totalTitle}>Total Pemesanan</h5>
               <p className={styles.totalValue}>Rp. 4.500.000</p>
-              <button className={styles.btnPayment}>Selesai</button>
+              <button onClick={() => setModalSuccesShow(true)} className={styles.btnPayment}>
+                Selesai
+              </button>
             </div>
           </div>
         </div>
       </div>
+      {/* succes modal */}
+      <Modal size="md" show={modalSuccesShow}>
+        <div className={styles.modalSucces}>
+          <div className={styles.ModalImageSucces}>
+            <AiOutlineCheckCircle className={styles.iconSucces} />
+          </div>
+          <div className={styles.ModalTextSucces}>
+            <h5 className={styles.modalTitleSucces}>Pembayaran Berhasil!</h5>
+            <p className={styles.modaldescSucces}>Silahkan cek email anda, untuk melihat detail transaksi</p>
+          </div>
+          <button onClick={() => window.location.reload()} className={styles.btnCloseModalSucces}>
+            Kembali
+          </button>
+        </div>
+      </Modal>
     </MainLayout>
   );
 }

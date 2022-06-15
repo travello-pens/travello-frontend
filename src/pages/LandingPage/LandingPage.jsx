@@ -5,11 +5,13 @@ import styles from "./LandingPage.module.css";
 import LandingSearchBar from "../../components/LandingSearchBar/LandingSearchBar";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Form from "react-bootstrap/Form";
+import mitraBox from "../../assets/images/mitraBox.png";
 
 //component
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import AboutusLp from "../../components/AboutusLp/AboutusLp";
 import HotelSantika from "../../assets/images/Hotel+Santika.png";
+import TravelAgentCard from "../../components/TravelAgentCard/TravelAgentCard";
 
 function LandingPage() {
   const searchHandler = (search) => {
@@ -30,11 +32,11 @@ function LandingPage() {
         <h2 className="h4 text-primary">Jelajahi lebih banyak Travel Agent di Indonesia</h2>
         <p className="text-muted mb-4">Lihat berbagai travel agent yang bermitra di Travello</p>
         <div className="row">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <TravelAgentCard />
+          <TravelAgentCard />
+          <TravelAgentCard />
+          <TravelAgentCard />
+          <TravelAgentCard />
         </div>
       </div>
       <div className="lp-aboutus">
@@ -100,42 +102,14 @@ function LandingPage() {
       </div>
 
       {/* mitra */}
+      {/* <div className={styles.mitraSectionMitra}>
+        <img src={mitraBox} alt="" className={styles.mitraImageBox} />
+      </div> */}
       <div className={styles.mitraSection}>
         <h5 className={styles.mitraTitleColor}>Siapa saja mitra kami ?</h5>
         <p className={styles.mitraDesc}>Lebih dari 50 hotel bintang telah bermitra dengan InHotel</p>
         <div className={styles.mitraContent}>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-        </div>
-        <div className={styles.mitraContent}>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
-          <div className={styles.mitraImagesContainer}>
-            <img src={HotelSantika} alt="" className={styles.imageItemMitra} />
-          </div>
+          <img src={mitraBox} alt="" className={styles.mitraImageBox} />
         </div>
       </div>
 

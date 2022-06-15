@@ -127,7 +127,6 @@
 .contactTag {
   font-size: 14px;
   font-weight: 500;
-  color: #2196f3;
 }
 
 .contactTitle {
@@ -171,4 +170,13 @@
   border: none;
   color: #fff;
   padding: 8px 0px;
+}
+
+/* .mitraSectionMitra {
+  width: 90%;
+  margin: 0px auto;
+} */
+
+.mitraImageBox {
+  width: 93%;
 }
