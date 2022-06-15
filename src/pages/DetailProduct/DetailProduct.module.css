@@ -70,6 +70,7 @@
 .description .descriptionText {
   text-align: justify;
   font-size: 16px;
+  white-space: pre;
 }
 
 .divider {
@@ -79,8 +80,7 @@
   margin: 25px 0px;
 }
 
-.services {
-}
+.services {}
 
 .service {
   display: flex;
@@ -109,6 +109,7 @@
 .menuItem {
   width: 49%;
 }
+
 /* right */
 .contentRight {
   height: 400px;

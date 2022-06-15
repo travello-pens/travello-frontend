@@ -3,6 +3,10 @@
   background-size: cover;
 }
 
+.jumbotron h1 strong {
+  line-height: 1.2 !important;
+}
+
 .socialMediaIcon {
   background-color: rgba(255, 255, 255, 0.5);
 

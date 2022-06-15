@@ -82,9 +82,7 @@ const LandingTravelAgent = () => {
         <p className="text-muted mb-4">Lihat berbagai layanan paket wisata yang tersedia.</p>
         <div className="row mx-auto">
           {!noProducts && products.map(p => (
-            <>
-              <ProductCard key={p.id} product={p} />
-            </>
+            <ProductCard key={p.id} product={p} />
           ))}
           {noProducts && <p className="text-center fs-3 fw-bolder text-muted mt-5">Tidak Ada Produk</p>}
         </div>

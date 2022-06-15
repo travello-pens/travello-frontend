@@ -43,7 +43,7 @@ function DetailProduct() {
       <div className={styles.mainWrapper}>
         <div className={styles.main}>
           <div className={styles.mainTitle}>
-            <h3 className={styles.title}>{product?.name}</h3>
+            <h3 className={styles.title}>{product?.name_product}</h3>
             <div className={styles.menuTitle}>
               <p className={styles.menuItemTitle}>By Pesona Indonesia</p>
             </div>

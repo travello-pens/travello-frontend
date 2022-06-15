@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
     <Link to={`/produk/${product.id}`} className={"col m-2 p-3 " + styles.productCard}>
       <img className="img-fluid rounded-2 mb-2" src="https://cdn1-production-images-kly.akamaized.net/VNcWu_hwhIuQiscc8cYdUN5OSmc=/1200x900/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3159012/original/037760500_1592803600-Ilustrasi_Bali.jpg" alt="card_image" />
       <div className="d-flex justify-content-between align-items-center mb-3">
-        <p className="fs-5 fw-bolder">{product?.name}</p>
+        <p className="fs-5 fw-bolder">{product?.name_product}</p>
         <img className={styles.travelAgentLogo} src="https://picture.urbanindo.com/listing/57154113950/01/3974501808/was3120061-gudang-di-jual-di-driyorejo-gresik-1646709461/780/780.jpg" alt="travel_agent_logo" />
       </div>
       <div className="d-flex align-items-center mb-3">

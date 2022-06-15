@@ -14,8 +14,10 @@ import AboutusLp from "../../components/AboutusLp/AboutusLp";
 import HotelSantika from "../../assets/images/Hotel+Santika.png";
 import { getLocations } from "../../utils/apis/getLocations";
 import { Link } from "react-router-dom";
+import { getTravelAgents } from "../../utils/apis/getTravelAgents";
 function LandingPage() {
   const [locations, setLocations] = useState([]);
+  const [travelAgents, setTravelAgents] = useState([]);
 
   useEffect(() => {
     // Fetch locations data
@@ -23,8 +25,14 @@ function LandingPage() {
       .then((data) => {
         setLocations(data.data);
       })
-      .catch(() => {});
-  });
+      .catch(() => { });
+
+    getTravelAgents()
+      .then((data) => {
+        setTravelAgents(data.data);
+      })
+      .catch(() => { });
+  }, []);
 
   const searchHandler = (search) => {
     console.log("Mencari : " + search);
@@ -44,11 +52,13 @@ function LandingPage() {
         <h2 className="h4 text-primary">Jelajahi lebih banyak Travel Agent di Indonesia</h2>
         <p className="text-muted mb-4">Lihat berbagai travel agent yang bermitra di Travello</p>
         <div className="row">
+          {travelAgents.map(ta => (
+            <TravelAgentCard key={ta.id} travelAgent={ta} />
+          ))}
+          {/* <TravelAgentCard />
           <TravelAgentCard />
           <TravelAgentCard />
-          <TravelAgentCard />
-          <TravelAgentCard />
-          <TravelAgentCard />
+          <TravelAgentCard /> */}
         </div>
       </div>
       <div className="lp-aboutus">
@@ -62,12 +72,12 @@ function LandingPage() {
         <div className={styles.dividerColor}></div>
         <div className={styles.contentSection}>
           {locations.map((l) => (
-            <Link key={l.id} to={`/tujuan/${l.name}`} className={styles.cityLink}>
+            <Link key={l.id} to={`/tujuan/${l.name_location}`} className={styles.cityLink}>
               <div className={styles.cityItem}>
                 <div className={styles.cityImage}>
                   <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="city" className={styles.cityImageItem} />
                 </div>
-                <p className={styles.cityTitle}>{l.name}</p>
+                <p className={styles.cityTitle}>{l.name_location}</p>
                 <p className={styles.totalDestination}>50 destinasi</p>
               </div>
             </Link>
