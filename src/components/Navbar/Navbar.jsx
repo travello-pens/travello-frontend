@@ -12,9 +12,11 @@ function Navbar() {
         </div>
       ) : (
         <div className={styles.beforeLoginWrapper}>
-          <div className={styles.logo}>
-            <img src={Logo} alt="logo" className={styles.logoItem} />
-          </div>
+          <Link to="/">
+            <div className={styles.logo}>
+              <img src={Logo} alt="logo" className={styles.logoItem} />
+            </div>
+          </Link>
           <div className={styles.menu}>
             <Link to="/travel" className={styles.menuLink}>
               Travel Agent

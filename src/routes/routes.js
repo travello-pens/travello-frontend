@@ -30,7 +30,7 @@ export const APP_ROUTE = [
   },
   {
     name: "DetailProduct",
-    path: "/detail-product/1",
+    path: "/produk/:productId",
     exact: false,
     component: DetailProduct,
     restricted: true,

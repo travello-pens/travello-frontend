@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+.cityLink {
+  text-decoration: none;
+}
+
 .cityImage {
   width: 150px;
   height: 150px;
