@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import DatePicker from "react-datepicker";
 //styles
@@ -9,9 +9,22 @@ import { HiReceiptTax } from "react-icons/hi";
 import { AiTwotoneHome } from "react-icons/ai";
 import { BsCalendarDateFill } from "react-icons/bs";
 import MainLayout from "../../layout/MainLayout/MainLayout";
+import { useEffect } from "react";
+import { getProductDetail } from "../../utils/apis/getProductDetail";
+import { formatRupiah } from "../../utils/numbers";
 function DetailProduct() {
+  const { productId } = useParams();
+  const [product, setProduct] = useState(null);
   const [reservationDate, setReservationDate] = useState(new Date());
   const [sortingDate, setSortingDate] = useState("");
+
+  useEffect(() => {
+    getProductDetail(productId)
+      .then(data => {
+        setProduct(data.data);
+      })
+      .catch();
+  }, [productId]);
 
   const dateChange = (date) => {
     setReservationDate(date);
@@ -30,7 +43,7 @@ function DetailProduct() {
       <div className={styles.mainWrapper}>
         <div className={styles.main}>
           <div className={styles.mainTitle}>
-            <h3 className={styles.title}>Tanah Lot</h3>
+            <h3 className={styles.title}>{product?.name}</h3>
             <div className={styles.menuTitle}>
               <p className={styles.menuItemTitle}>By Pesona Indonesia</p>
             </div>
@@ -51,8 +64,7 @@ function DetailProduct() {
               <div className={styles.description}>
                 <h5 className={styles.descriptionTitle}>Deskripsi</h5>
                 <div className={styles.descriptionText}>
-                  Come and stay in this superb duplex T2, in the heart of the historic center of Bordeaux. Spacious and bright, in a real Bordeaux building in exposed stone, you will enjoy all the charms of the city thanks to its ideal
-                  location. Close to many shops, bars and restaurants, you can access the apartment by tram A and C and bus routes 27 and 44. ...
+                  {product?.description}
                 </div>
               </div>
               <div className={styles.divider}></div>
@@ -90,7 +102,7 @@ function DetailProduct() {
                         <FormControlLabel className={styles.packageItem} value={paket.id} control={<Radio />} label={`Rp. ${formatRupiah(paket.harga_harga)} / ${paket.nama_harga}`} />
                       </RadioGroup>
                     </FormControl> */}
-                <p className={styles.pricePackage}>Rp. 450.000</p>
+                <p className={styles.pricePackage}>{formatRupiah(product?.price)}</p>
                 <p className={styles.availablePackage}>16 sold</p>
               </div>
               <div className={styles.timePickerWrapper}>
@@ -103,15 +115,15 @@ function DetailProduct() {
               <div className={styles.pricesList}>
                 <div className={styles.mainPrice}>
                   <p className={styles.priceTitle}>Biaya Utama</p>
-                  <p className={styles.pricevalue}>Rp. 4.500.000</p>
+                  <p className={styles.pricevalue}>{formatRupiah(product?.price)}</p>
                 </div>
                 <div className={styles.addPrice}>
                   <p className={styles.priceTitle}>Pajak</p>
-                  <p className={styles.pricevalue}>Rp. 100.000</p>
+                  <p className={styles.pricevalue}>Rp 100.000,00</p>
                 </div>
                 <div className={styles.totalPrice}>
                   <p className={styles.priceTitle}>Total</p>
-                  <p className={styles.pricevalue}>Rp. 4.500.000</p>
+                  <p className={styles.pricevalue}>{product && formatRupiah(product?.price + 100000)}</p>
                 </div>
               </div>
               <div className={styles.btnCheckoutContainer}>

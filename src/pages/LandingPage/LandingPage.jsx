@@ -1,5 +1,5 @@
 //dependency
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./LandingPage.css";
 import styles from "./LandingPage.module.css";
 import LandingSearchBar from "../../components/LandingSearchBar/LandingSearchBar";
@@ -10,8 +10,20 @@ import Form from "react-bootstrap/Form";
 import MainLayout from "../../layout/MainLayout/MainLayout";
 import AboutusLp from "../../components/AboutusLp/AboutusLp";
 import HotelSantika from "../../assets/images/Hotel+Santika.png";
+import { getLocations } from "../../utils/apis/getLocations";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    // Fetch locations data
+    getLocations()
+      .then(data => {
+        setLocations(data.data);
+      }).catch(() => { });
+  });
+
   const searchHandler = (search) => {
     console.log("Mencari : " + search);
   };
@@ -29,13 +41,6 @@ function LandingPage() {
       <div className="container mt-5">
         <h2 className="h4 text-primary">Jelajahi lebih banyak Travel Agent di Indonesia</h2>
         <p className="text-muted mb-4">Lihat berbagai travel agent yang bermitra di Travello</p>
-        <div className="row">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
       </div>
       <div className="lp-aboutus">
         <AboutusLp />
@@ -47,14 +52,18 @@ function LandingPage() {
         </div>
         <div className={styles.dividerColor}></div>
         <div className={styles.contentSection}>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Bali</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
+          {locations.map(l => (
+            <Link key={l.id} to={`/tujuan/${l.name}`} className={styles.cityLink}>
+              <div className={styles.cityItem}>
+                <div className={styles.cityImage}>
+                  <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="city" className={styles.cityImageItem} />
+                </div>
+                <p className={styles.cityTitle}>{l.name}</p>
+                <p className={styles.totalDestination}>50 destinasi</p>
+              </div>
+            </Link>
+          ))}
+          {/* <div className={styles.cityItem}>
             <div className={styles.cityImage}>
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Western_Surabaya_at_dusk_%28late_2015%29.jpg/600px-Western_Surabaya_at_dusk_%28late_2015%29.jpg" alt="" className={styles.cityImageItem} />
             </div>
@@ -95,7 +104,7 @@ function LandingPage() {
             </div>
             <p className={styles.cityTitle}>Bali</p>
             <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
+          </div> */}
         </div>
       </div>
 
