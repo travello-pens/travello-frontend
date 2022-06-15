@@ -63,48 +63,6 @@ function LandingPage() {
               </div>
             </Link>
           ))}
-          {/* <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Western_Surabaya_at_dusk_%28late_2015%29.jpg/600px-Western_Surabaya_at_dusk_%28late_2015%29.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Surabaya</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Tugu_Malang.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Malang</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://blog.antavaya.com/wp-content/uploads/2020/03/Destinasi-Wisata-Lombok-Paling-Populer-Tahun-2020-Sumber-Instagram-kezyayoanas_.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Lombok</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Bali</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Bali</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div>
-          <div className={styles.cityItem}>
-            <div className={styles.cityImage}>
-              <img src="https://d3p0bla3numw14.cloudfront.net/news-content/img/2021/05/03112735/Tempat-Tinggal-Terbaik-di-Bali.jpg" alt="" className={styles.cityImageItem} />
-            </div>
-            <p className={styles.cityTitle}>Bali</p>
-            <p className={styles.totalDestination}>50 destinasi</p>
-          </div> */}
         </div>
       </div>
 
